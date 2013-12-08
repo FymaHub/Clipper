@@ -9,17 +9,10 @@ Public Class Form1
     End Sub
 
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox("My.Computer.Clipboard.GetText()")
     End Sub
-    Private Sub Button3_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseHover
-        ToolTip1.Show("Stel de afbeelding in het klembord in als achtergrond van het hoofdmenu van Clipper.", Button1)
-    End Sub
-    Private Sub Button3_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.MouseLeave
-        ToolTip1.Hide(Button1)
-    End Sub
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         My.Computer.Clipboard.Clear()
         MsgBox("Het klembord is leeggemaakt!")
     End Sub
@@ -28,7 +21,7 @@ Public Class Form1
         AboutBox1.Show()
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If My.Computer.Clipboard.ContainsImage() Then
             Dim grabpicture As System.Drawing.Image
             grabpicture = My.Computer.Clipboard.GetImage()
@@ -36,14 +29,9 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub AfsluitenToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AfsluitenToolStripMenuItem.Click
+    Private Sub SluitenToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SluitenToolStripMenuItem.Click
         Me.Close()
     End Sub
-
-    Private Sub OverClipperToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OverClipperToolStripMenuItem.Click
-        AboutBox1.Show()
-    End Sub
-
     Private Sub ControlerenOpupdatesToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ControlerenOpupdatesToolStripMenuItem.Click
         Form2.Show()
     End Sub
@@ -51,20 +39,8 @@ Public Class Form1
     Private Sub FymaWebsiteToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FymaWebsiteToolStripMenuItem.Click
         System.Diagnostics.Process.Start("http://www.fymawebsite.tk")
     End Sub
-
-    Private Sub BugOfFoutGevondenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BugOfFoutGevondenToolStripMenuItem.Click
-        System.Diagnostics.Process.Start("http://fymawebsite.wordpress.com/bug-of-fout-gevonden/")
+    Private Sub OverToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OverToolStripMenuItem.Click, OverToolStripMenuItem.Click
+        AboutBox1.Show()
     End Sub
 End Class
 
-
-Public NotInheritable Class AboutBox1
-
-    Private Sub TableLayoutPanel_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.Close()
-    End Sub
-End Class
